@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+
+jwt:
+  issuer: emhong974@gmail.com
+  secret_key: 54c88d3c5a2798a915889fd81f3df9cdf92e4f05a335105898a330e5e84976f6
