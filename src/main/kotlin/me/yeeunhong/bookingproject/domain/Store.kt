@@ -9,11 +9,11 @@ data class Store (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
-    var id: Long = 0,
+    var id: Long = 1,
 
     @Column(name = "storeType", unique = true, nullable = false)
     var storeType: StoreType = StoreType.RESTAURANT,
 
     @Column(name = "storeName", nullable = false)
-    var storeName: String = ""
+    var storeName: String
 )

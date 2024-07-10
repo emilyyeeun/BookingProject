@@ -14,10 +14,10 @@ class StoreService(
 
     @Transactional
     fun createStore(storeType: StoreType, storeName: String) : Store {
-        val store = Store().apply {
-            this.storeType = storeType
-            this.storeName = storeName
-        }
+        val store = Store (
+            storeType = storeType,
+            storeName = storeName
+        )
         return storeRepository.save(store)
     }
 
