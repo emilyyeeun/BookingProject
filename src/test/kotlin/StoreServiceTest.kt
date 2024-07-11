@@ -35,7 +35,7 @@ internal class StoreServiceTest {
 
         //when
         every {
-            storeRepository.save(store)
+            storeRepository.save(any())
         } returns store
 
         //do
