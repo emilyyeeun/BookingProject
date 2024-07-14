@@ -34,9 +34,7 @@ internal class StoreServiceTest {
         )
 
         //when
-        every {
-            storeRepository.save(any())
-        } returns store
+        every { storeRepository.save(store) } returns store
 
         //do
         val createdStore = storeService.createStore(StoreType.RESTAURANT, "예니의 식당")
